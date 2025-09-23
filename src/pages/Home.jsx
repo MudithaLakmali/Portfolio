@@ -1,10 +1,11 @@
 import stickman1 from "../assets/stickman1.png";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
+import Projects from "../components/Projects";
 
 function Home() {
   return (
-    <div className="h-screen w-screen bg-white relative">
+    <div className="h-screen w-screen bg-gray-100 relative">
       <Navbar />
 
       <div className="flex items-center justify-between h-full px-10">
@@ -31,6 +32,23 @@ function Home() {
           </p>
         </div>
       </div>
+
+      <div className="absolute bottom-10 w-full flex justify-center">
+        <motion.div
+          animate={{ y: [0, -10, 0] }} // simple up-and-down shake
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          className="text-gray-700  cursor-pointer"
+         
+        >
+          <h1>Stick Around and Scroll!</h1>
+        </motion.div>
+          </div>
+          
+          <Projects/>
     </div>
   );
 }
