@@ -9,32 +9,32 @@ function Projects() {
     () => [
       {
         id: 0,
-        title: "E-Commerce Platform",
-        subtitle: "Full-stack web application",
+        title: "Spendwise",
+        subtitle: "App development",
         img: project1,
         description:
-          "A modern e-commerce platform built with React and Node.js, featuring user authentication, payment integration, and responsive design.",
-        technologies: "React, Node.js, MongoDB, Stripe API",
+          "SpendWise is a simple app that helps users track expenses, set budgets, and manage money wisely.",
+        technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
         github: "https://github.com/yourusername/ecommerce-platform",
       },
       {
         id: 1,
-        title: "Weather Dashboard",
-        subtitle: "Real-time weather tracking",
+        title: "Smart Hydroponic System",
+        subtitle: "Hardware Project",
         img: project2,
         description:
-          "Interactive weather dashboard that provides real-time weather data, forecasts, and beautiful visualizations using modern APIs.",
-        technologies: "React, OpenWeather API, Chart.js, Tailwind CSS",
+          "A modern solution for growing plants without soil, using sensors to monitor water, nutrients, and light for healthier and faster growth.",
+        technologies: ["C++", "IoT"],
         github: "https://github.com/yourusername/weather-dashboard",
       },
       {
         id: 2,
-        title: "Task Management App",
-        subtitle: "Productivity and organization tool",
+        title: "Firefly Glow",
+        subtitle: "Webpage",
         img: project3,
         description:
-          "A collaborative task management application with drag-and-drop functionality, real-time updates, and team collaboration features.",
-        technologies: "React, Firebase, DND Kit, TypeScript",
+          "Firefly Glow is a bright and simple webpage that adds a spark of creativity and fun.",
+        technologies: ["React", "Firebase", "DND Kit", "TypeScript"],
         github: "https://github.com/yourusername/task-manager",
       },
       {
@@ -43,8 +43,8 @@ function Projects() {
         subtitle: "Personal showcase platform",
         img: project4,
         description:
-          "A responsive portfolio website featuring 3D animations, smooth scrolling, and interactive elements to showcase projects and skills.",
-        technologies: "React, Three.js, Framer Motion, Tailwind CSS",
+          "Not about being perfect — just me having fun and sharing what I love to do.",
+        technologies: ["React", "JS", "Framer Motion", "Tailwind CSS"],
         github: "https://github.com/yourusername/portfolio-website",
       },
     ],
@@ -95,8 +95,8 @@ function Projects() {
       }}
       className="min-h-screen"
     >
-      <div className="relative z-10 h-full w-full flex flex-col items-center justify-center gap-8 py-40 ">
-        <div className="absolute top-10 left-25 ">
+      <div className="relative z-10 h-full w-full flex flex-col items-center justify-center gap-8 py-40">
+        <div className="absolute top-10 left-25">
           <h2 className="text-5xl font-bold text-gray-800 mb-4">
             The Sticky Files
           </h2>
@@ -125,7 +125,7 @@ function Projects() {
                     transform: `rotateY(${baseAngle}deg) translateZ(${radiusPx}px)`,
                   }}
                 >
-                  <div className="h-full w-full overflow-hidden rounded-2xl bg-white shadow-md border border-gray-200">
+                  <div className="h-full w-full overflow-hidden rounded-2xl bg-white shadow-md border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                     <div className="h-48 w-full overflow-hidden">
                       <img
                         src={project.img}
@@ -134,16 +134,30 @@ function Projects() {
                       />
                     </div>
                     <div className="p-6 text-gray-800">
-                      <h3 className="text-xl font-semibold mb-2">
+                      <h3 className="text-xl font-semibold mb-2 text-gray-900">
                         {project.title}
                       </h3>
-                      <p className="text-gray-600 mb-2">{project.subtitle}</p>
+                      <p className="text-gray-600 mb-2 italic">
+                        {project.subtitle}
+                      </p>
                       <p className="text-gray-700 mb-3">
                         {project.description}
                       </p>
-                      <p className="text-gray-500 mb-3 font-medium">
-                        Technologies: {project.technologies}
-                      </p>
+                      <div className="mb-3">
+                        <span className="font-medium text-gray-500">
+                          Technologies:{" "}
+                        </span>
+                      </div>
+                      <div className="mb-3">
+                        {project.technologies.map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="inline-block bg-blue-100 text-blue-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                       <a
                         href={project.github}
                         target="_blank"
