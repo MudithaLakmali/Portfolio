@@ -2,6 +2,7 @@ import stickman1 from "../assets/stickman1.png";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -48,7 +49,9 @@ function Home() {
         </motion.div>
           </div>
           
-          <Projects/>
+      <Projects />
+      
+      <Footer/>
     </div>
   );
 }

@@ -95,8 +95,8 @@ function Projects() {
       }}
       className="min-h-screen"
     >
-      <div className="relative z-10 h-full w-full flex flex-col items-center justify-center gap-8 py-20">
-        <div className="text-center mb-8">
+      <div className="relative z-10 h-full w-full flex flex-col items-center justify-center gap-8 py-40 ">
+        <div className="absolute top-10 left-25 ">
           <h2 className="text-5xl font-bold text-gray-800 mb-4">
             The Sticky Files
           </h2>
