@@ -1,9 +1,10 @@
-import Contact from "../components/contact";
+
 import Footer from "../components/Footer";
 import Meetmeimg from "../assets/Meetme.png";
 import Technologies from "../components/Technologies";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Contact from "../components/contact";
 
 function Meetme() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
@@ -67,7 +68,8 @@ function Meetme() {
 
       {/* Contact & Footer */}
       <Technologies />
-      <Contact />
+      <Contact/>
+      
       <Footer />
     </div>
   );
