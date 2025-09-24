@@ -1,10 +1,8 @@
 import contact from "../assets/contact.png";
 import confetti from "canvas-confetti";
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 function Contact() {
-    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
   const handleConfetti = () => {
     confetti({
       particleCount: 80,
@@ -15,48 +13,47 @@ function Contact() {
   };
 
   return (
-    <div className="flex bg-white justify-center items-center min-h-[500px]">
+    <div className="flex bg-white justify-center items-center min-h-[500px] px-10">
       {/* Image */}
-      <div>
-        <motion.img
-                    src={contact}
-                    alt="contact image"
-                    className="w-200 h-auto relative left-40" 
-                    initial={{ opacity: 0, x: -200 }} 
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1 }}
-                  />
-      </div>
+      <motion.img
+        src={contact}
+        alt="contact image"
+        className="w-200 h-auto relative left-40"
+        initial={{ opacity: 0, x: -200 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      />
 
       {/* Contact Info */}
-      <div className="relative right-40">
-        <h2 className="text-3xl font-bold mb-4">Wanna Contact me</h2>
+      <div className="relative right-20 max-w-md text-left space-y-6 rlative right-70">
+        <h2 className="text-4xl font-bold tracking-tight">Wanna Connect</h2>
 
-        <p className="text-gray-800 font-medium">
-          {"Shoot me an email: "}
-          <br />
+        <div className="space-y-2">
+          <p className="text-gray-700 font-medium">Email</p>
           <a
             href="mailto:muditha0256@gmail.com"
             onClick={handleConfetti}
-            className="text-blue-500 hover:underline inline-block cursor-pointer"
+            title="Just click it..Then it's done"
+            className="text-gray-900 underline hover:no-underline transition"
           >
             muditha0256@gmail.com
           </a>
+        </div>
 
-          <div className="mb-10 mt-4">
-            {"LinkedIn: "}
-            <br />
-            <a
-              href="https://linkedin.com/in/muditha-lakmali"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              linkedin.com/in/muditha-lakmali
-            </a>
-          </div>
+        <div className="space-y-2">
+          <p className="text-gray-700 font-medium">LinkedIn</p>
+          <a
+            href="https://linkedin.com/in/muditha-lakmali"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-900 underline hover:no-underline transition"
+          >
+            linkedin.com/in/muditha-lakmali
+          </a>
+        </div>
 
-          <p className="mb-2">{"Hire me before someone else does 😉"}</p>
+        <p className="italic text-gray-600">
+          Hire me before someone else does... Just kidding
         </p>
       </div>
     </div>

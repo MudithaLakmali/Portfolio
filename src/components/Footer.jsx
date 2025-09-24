@@ -12,7 +12,8 @@ function Footer() {
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Funny text */}
         <p className="text-gray-600 text-sm text-center md:text-left">
-          © 2025 The Sticky Files. All rights… kinda reserved 😎
+          © 2025 The Sticky Files. All rights… kinda reserved{" "}
+          <span className="filter grayscale">😎</span>
         </p>
 
         {/* Social media icons */}

@@ -29,11 +29,25 @@ function Meetme() {
             </p>
 
             <p className="text-lg text-gray-600 mb-6">
-              When I’m not coding, you’ll probably find me daydreaming about my
-              next trip or exploring new places.
+              When I’m not coding, you’ll probably find me somewhere between
+              mountain tops or exploring new places.
+            </p>
+
+            <p className="text-lg text-gray-600 mb-6">
+              Oh, and I just started write too! My blogs are a bit of a mixed bag. you’ll find
+              posts on{" "}
+              <a
+                href="https://medium.com/@muditha0256"
+                className="font-bold underline hover:text-gray-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Medium
+              </a>
+              , . Curious? Go ahead!
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              Oh, and I’m just a good girl.
+              Finally I’m just a good girl.
             </p>
           </motion.div>
         </div>
@@ -41,13 +55,13 @@ function Meetme() {
         {/* Right Side (Image) */}
         <div className="flex-1 flex justify-center">
           <motion.img
-                      src={Meetmeimg}
-                      alt="meetme"
-                      className="w-90 h-auto mt-10 relative left-10" // smaller size (adjust w-48 as needed)
-                      initial={{ opacity: 0, x: 100 }} // fade/slide in when page loads
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 1 }}
-                    />
+            src={Meetmeimg}
+            alt="meetme"
+            className="w-90 h-auto mt-10 relative left-10" // smaller size (adjust w-48 as needed)
+            initial={{ opacity: 0, x: 100 }} // fade/slide in when page loads
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          />
         </div>
       </div>
 
