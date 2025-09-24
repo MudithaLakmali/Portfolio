@@ -46,7 +46,7 @@ function Projects() {
         description:
           "Not about being perfect — just me having fun and sharing what I love to do.",
         technologies: ["React", "JS", "Framer Motion", "Tailwind CSS"],
-        github: "https://github.com/yourusername/portfolio-website",
+        github: "https://github.com/MudithaLakmali/Portfolio",
       },
     ],
     []

@@ -15,7 +15,7 @@ function Home() {
           <motion.img
             src={stickman1}
             alt="Stickman"
-            className=""
+            className="relative left-35"
             initial={{ opacity: 0, x: -100 }} // start off-screen left
             animate={{ opacity: 1, x: 0 }} // slide in to position
             transition={{ duration: 1 }} // 1 second smooth animation

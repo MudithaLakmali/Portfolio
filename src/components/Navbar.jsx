@@ -13,7 +13,7 @@ function Navbar() {
         >
           Resume
         </a>
-        <Link to="/meetme" style={styles.link}>
+        <Link to="/Meetme" style={styles.link}>
           Meet Me
         </Link>
       </div>
@@ -47,6 +47,7 @@ const styles = {
     color: "",
     cursor: "pointer",
     transition: "",
+    
   },
 };
 
