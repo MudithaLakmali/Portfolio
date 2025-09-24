@@ -25,7 +25,7 @@ function Contact() {
       />
 
       {/* Contact Info */}
-      <div className="relative right-20 max-w-md text-left space-y-6 rlative right-70">
+      <div className="relative right-55 max-w-md text-left space-y-6 ">
         <h2 className="text-4xl font-bold tracking-tight">Wanna Connect</h2>
 
         <div className="space-y-2">
