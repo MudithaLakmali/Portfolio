@@ -2,7 +2,7 @@ import contact from "../assets/contact.png";
 import confetti from "canvas-confetti";
 import { motion } from "framer-motion";
 
-function Contact() {
+function Contact_() {
   const handleConfetti = () => {
     confetti({
       particleCount: 80,
@@ -60,4 +60,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Contact_;
