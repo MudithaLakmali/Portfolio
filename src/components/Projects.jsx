@@ -15,7 +15,8 @@ function Projects() {
         description:
           "SpendWise is a simple app that helps users track expenses, set budgets, and manage money wisely.",
         technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
-        github: "https://github.com/yourusername/ecommerce-platform",
+        github:
+          "https://github.com/NalakaDineshSamarasingha/SpendWise-frontend",
       },
       {
         id: 1,
@@ -34,8 +35,8 @@ function Projects() {
         img: project3,
         description:
           "Firefly Glow is a bright and simple webpage that adds a spark of creativity and fun.",
-        technologies: ["React", "Firebase", "DND Kit", "TypeScript"],
-        github: "https://github.com/yourusername/task-manager",
+        technologies: ["React", "Tailwind"],
+        github: "https://github.com/MudithaLakmali/firefly",
       },
       {
         id: 3,

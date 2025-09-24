@@ -29,8 +29,8 @@ function Home() {
             IT'S MUDITHA
           </h1>
           <p className="text-xl text-gray-600 max-w-md">
-            Welcome to my personal space! I'm Muditha, passionate about IT and
-            creativity. This is my homepage where I share my journey and ideas.
+            I like coding, plants, and making random fun stuff. This is my
+            little space to share whatever I’m up to!
           </p>
         </div>
       </div>
@@ -44,15 +44,14 @@ function Home() {
             repeatType: "loop",
           }}
           className="text-gray-700  cursor-pointer"
-         
         >
           <h1>Stick Around and Scroll!</h1>
         </motion.div>
-          </div>
-          
+      </div>
+
       <Projects />
-      
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }
