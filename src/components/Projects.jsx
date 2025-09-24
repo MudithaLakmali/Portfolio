@@ -3,6 +3,8 @@ import project1 from "../assets/project1.jpeg";
 import project2 from "../assets/project2.jpeg";
 import project3 from "../assets/project3.jpeg";
 import project4 from "../assets/project4.jpeg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Projects() {
   const projects = useMemo(
@@ -85,6 +87,7 @@ function Projects() {
 
   const rotationDeg = index * -(360 / projects.length);
   const radiusPx = 480;
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
     <div
@@ -97,13 +100,21 @@ function Projects() {
       className="min-h-screen"
     >
       <div className="relative z-10 h-full w-full flex flex-col items-center justify-center gap-8 py-40">
-        <div className="absolute top-10 left-25">
-          <h2 className="text-5xl font-bold text-gray-800 mb-4">
-            The Sticky Files
-          </h2>
-          <p className="text-xl text-gray-600">
-            These are some of my projects—fun, simple, and made by me!
-          </p>
+        <div className="">
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="absolute top-10 left-25"
+          >
+            <h2 className="text-5xl font-bold text-gray-800 mb-4">
+              The Sticky Files
+            </h2>
+            <p className="text-xl text-gray-600">
+              These are some of my projects—fun, simple, and made by me!
+            </p>
+          </motion.div>
         </div>
 
         <div

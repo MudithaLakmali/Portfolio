@@ -1,7 +1,10 @@
 import contact from "../assets/contact.png";
 import confetti from "canvas-confetti";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 function Contact() {
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
   const handleConfetti = () => {
     confetti({
       particleCount: 80,
@@ -12,14 +15,17 @@ function Contact() {
   };
 
   return (
-    <div className="flex bg-gray-100 justify-center items-center min-h-[500px]">
+    <div className="flex bg-white justify-center items-center min-h-[500px]">
       {/* Image */}
       <div>
-        <img
-          src={contact}
-          alt="contact img"
-          className="w-190 relative left-50"
-        />
+        <motion.img
+                    src={contact}
+                    alt="contact image"
+                    className="w-200 h-auto relative left-40" 
+                    initial={{ opacity: 0, x: -200 }} 
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                  />
       </div>
 
       {/* Contact Info */}
