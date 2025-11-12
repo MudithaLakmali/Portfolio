@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import { useInView } from "react-intersection-observer";
 import stickmanVideo from "../assets/StickmanVideo1.mp4";
-import NewProjects from "../components/newProjects";
+import NewProjects from "../components/NewProjects";
 
 
 
