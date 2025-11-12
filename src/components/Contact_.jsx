@@ -1,6 +1,6 @@
-import contact from "../assets/contact.png";
 import confetti from "canvas-confetti";
 import { motion } from "framer-motion";
+import contact from "../assets/contact.mp4";
 
 function Contact_() {
   const handleConfetti = () => {
@@ -14,19 +14,24 @@ function Contact_() {
 
   return (
     <div className="flex bg-white justify-center items-center min-h-[500px] px-10">
-      {/* Image */}
-      <motion.img
+      {/* Contact Video */}
+      <motion.video
         src={contact}
-        alt="contact image"
-        className="w-200 h-auto relative left-40"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-50 h-auto  relative right-30"
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       />
 
       {/* Contact Info */}
-      <div className="relative right-55 max-w-md text-left space-y-6 ">
-        <h2 className="text-4xl font-bold tracking-tight">Wanna Connect</h2>
+      <div className="relative right- max-w-md text-left space-y-6">
+        <h2 className="text-4xl font-bold tracking-tight text-gray-900">
+          Wanna Connect
+        </h2>
 
         <div className="space-y-2">
           <p className="text-gray-700 font-medium">Email</p>
